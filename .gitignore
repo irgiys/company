@@ -1,0 +1,87 @@
+## .gitignore untuk proyek .NET / .NET Core 10
+
+# Folder build hasil kompilasi
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# Folder Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Folder Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Folder VS Code (opsional, hapus jika ingin ikut commit config)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Hasil build & publish
+build/
+publish/
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+wwwroot/dist/
+
+# Rider/VS test & coverage
+[Tt]est[Rr]esult*/
+*.coverage
+*.coveragexml
+coverage/
+TestResults/
+
+# File temporary & backup OS
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Docker
+**/docker-compose.override.yml
+
+# Secrets (jangan sampai ikut ter-commit)
+*.pfx
+*.key
+secrets.json
+appsettings.Secrets.json
+
+# EF Core migrations cache (opsional, biasanya migrations tetap dicommit)
+# **/Migrations/*.cs
+
+# File hasil generate otomatis
+*.generated.cs
+*.g.cs
+*.g.i.cs
+
+# Environment file
+.env
+.env.local
