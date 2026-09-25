@@ -1,0 +1,36 @@
+﻿@model List<company.Models.EmployeeModel>
+
+<h1>Employee's</h1>
+<a asp-action="Create" class="btn btn-primary mb-2">
+    + Add employee
+</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>NIK</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Division</th>
+            <th>Salary</th>
+            <th>Last Update</th>
+            <th>Action</th>
+        </tr>
+        @foreach(var e in Model)
+        {
+            <tr>
+                <td>@e.nik</td>
+                <td>@e.name</td>
+                <td>@e.email</td>
+                <td>@e.division</td>
+                <td>@e.salary</td>
+                <td>@e.updated_at</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@e.id" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@e.id" class="btn btn-danger">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </thead>
+</table>
